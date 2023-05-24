@@ -11,7 +11,9 @@ jobs:
       - name: Use Node.js lint, test and coverage
         uses: actions/setup-node@v1
         with:
-          node-version: node@latest
+          node-version: '14'
       - working-directory: client
         run: |
           yarn install
+          yarn lint
+          yarn test:unit:coverage
