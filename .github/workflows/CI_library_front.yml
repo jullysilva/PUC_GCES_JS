@@ -1,0 +1,17 @@
+name: Front CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js lint, test and coverage
+        uses: actions/setup-node@v1
+        with:
+          node-version: node@latest
+      - working-directory: client
+        run: |
+          yarn install
