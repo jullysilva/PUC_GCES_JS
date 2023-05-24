@@ -35,15 +35,6 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
         working-directory: library_back
-      - name: Run Migrations
-        run: python manage.py makemigrations
-        working-directory: library_back
-      - name: Run Migrate
-        run: python manage.py migrate
-        working-directory: library_back
-      - name: RunServer
-        run: python manage.py runserver
-        working-directory: library_back
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
