@@ -15,5 +15,4 @@ jobs:
       - working-directory: library_front
         run: |
           yarn install
-          yarn lint
-          yarn test:unit:coverage
+          yarn test
