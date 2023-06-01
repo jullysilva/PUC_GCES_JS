@@ -8,10 +8,10 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/
 
 # Copia a aplicação para o diretório raiz do servidor Nginx
-COPY . /usr/share/nginx/html
+COPY /library_front/ .
 
 # Define a porta em que o contêiner Nginx será exposto
-EXPOSE 80
+EXPOSE 8080
 
 # Comando para iniciar o servidor Nginx
 CMD ["nginx", "-g", "daemon off;"]
